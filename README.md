@@ -6,6 +6,17 @@ based on: [Cordova DatePicker Plugin](https://github.com/VitaliiBlagodir/cordova
 
 origin ios [https://github.com/sectore/phonegap3-ios-datepicker-plugin](https://github.com/sectore/phonegap3-ios-datepicker-plugin)
 
+
+## Installation
+```shell
+react-native link react-native-datepicker-ios
+```
+
+### Copy DatePicker.xib to Bundle Resources
+```
+Target > Build Phases > Copy Bundle Resources > Add > select DatePicker.xib in node_modules react-native-datepicker-ios directory
+```
+
 ## Usage
 
 **pickDate.js**
