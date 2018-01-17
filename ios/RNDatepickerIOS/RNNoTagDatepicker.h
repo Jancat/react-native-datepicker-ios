@@ -6,6 +6,6 @@
 
 
 
-@interface RNNoTagDatepicker : RCTEventEmitter <RCTBridgeModule>
+@interface RNDatepickerIOS : RCTEventEmitter <RCTBridgeModule>
 
 @end

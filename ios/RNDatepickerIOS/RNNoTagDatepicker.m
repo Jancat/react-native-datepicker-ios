@@ -1,10 +1,10 @@
-#import "RNNoTagDatepicker.h"
+#import "RNDatepickerIOS.h"
 #import <React/RCTBridge.h>
 
-#define DATETIME_FORMAT @"yyyy-MM-dd HH:mm:ss"
+#define DATETIME_FORMAT @"yyyy-MM-dd"
 #define ANIMATION_DURATION 0.3
 
-@interface RNNoTagDatepicker ()
+@interface RNDatepickerIOS ()
 
 @property (nonatomic) IBOutlet UIView* datePickerContainer;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *datePickerComponentsContainerVSpace;
@@ -15,7 +15,7 @@
 
 @end
 
-@implementation RNNoTagDatepicker
+@implementation RNDatepickerIOS
 
 @synthesize bridge = _bridge;
 
@@ -103,11 +103,15 @@ RCT_EXPORT_METHOD(show:(NSDictionary *) options) {
         
         NSString *dateString = [options objectForKey:@"date"];
         NSString *maxDateString = [options objectForKey:@"maxDate"];
+        NSString *minDateString = [options objectForKey:@"minDate"];
         
         self.datePicker.date = [formatter dateFromString:dateString];
         
         if(maxDateString && maxDateString.length > 0){
             self.datePicker.maximumDate = [formatter dateFromString:maxDateString];
+        }
+        if(maxDateString && maxDateString.length > 0){
+            self.datePicker.minimumDate = [formatter dateFromString:minDateString];
         }
         
         self.datePicker.datePickerMode = UIDatePickerModeDate;

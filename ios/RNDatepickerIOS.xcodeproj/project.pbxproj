@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40AE12E21F3BFC0200EB5153 /* RNNoTagDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AE12E11F3BFC0200EB5153 /* RNNoTagDatepicker.m */; };
-		40AE12E31F3BFC0200EB5153 /* RNNoTagDatepicker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40AE12E01F3BFC0200EB5153 /* RNNoTagDatepicker.h */; };
+		40AE12E21F3BFC0200EB5153 /* RNDatepickerIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AE12E11F3BFC0200EB5153 /* RNNoTagDatepicker.m */; };
+		40AE12E31F3BFC0200EB5153 /* RNDatepickerIOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40AE12E01F3BFC0200EB5153 /* RNNoTagDatepicker.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,16 +18,16 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				40AE12E31F3BFC0200EB5153 /* RNNoTagDatepicker.h in CopyFiles */,
+				40AE12E31F3BFC0200EB5153 /* RNDatepickerIOS.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		40AE12DD1F3BFC0200EB5153 /* libRNNoTagDatepicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNNoTagDatepicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		40AE12E01F3BFC0200EB5153 /* RNNoTagDatepicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNNoTagDatepicker.h; sourceTree = "<group>"; };
-		40AE12E11F3BFC0200EB5153 /* RNNoTagDatepicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNNoTagDatepicker.m; sourceTree = "<group>"; };
+		40AE12DD1F3BFC0200EB5153 /* libRNDatepickerIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNDatepickerIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		40AE12E01F3BFC0200EB5153 /* RNDatepickerIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNNoTagDatepicker.h; sourceTree = "<group>"; };
+		40AE12E11F3BFC0200EB5153 /* RNDatepickerIOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNNoTagDatepicker.m; sourceTree = "<group>"; };
 		40AE12EF1F3BFE5600EB5153 /* DatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DatePicker.xib; path = ../../../../../../Desktop/DatePicker.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,7 +45,7 @@
 		40AE12D41F3BFC0200EB5153 = {
 			isa = PBXGroup;
 			children = (
-				40AE12DF1F3BFC0200EB5153 /* RNNoTagDatepicker */,
+				40AE12DF1F3BFC0200EB5153 /* RNDatepickerIOS */,
 				40AE12DE1F3BFC0200EB5153 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,27 +53,27 @@
 		40AE12DE1F3BFC0200EB5153 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				40AE12DD1F3BFC0200EB5153 /* libRNNoTagDatepicker.a */,
+				40AE12DD1F3BFC0200EB5153 /* libRNDatepickerIOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		40AE12DF1F3BFC0200EB5153 /* RNNoTagDatepicker */ = {
+		40AE12DF1F3BFC0200EB5153 /* RNDatepickerIOS */ = {
 			isa = PBXGroup;
 			children = (
 				40AE12EF1F3BFE5600EB5153 /* DatePicker.xib */,
-				40AE12E01F3BFC0200EB5153 /* RNNoTagDatepicker.h */,
-				40AE12E11F3BFC0200EB5153 /* RNNoTagDatepicker.m */,
+				40AE12E01F3BFC0200EB5153 /* RNDatepickerIOS.h */,
+				40AE12E11F3BFC0200EB5153 /* RNDatepickerIOS.m */,
 			);
-			path = RNNoTagDatepicker;
+			path = RNDatepickerIOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		40AE12DC1F3BFC0200EB5153 /* RNNoTagDatepicker */ = {
+		40AE12DC1F3BFC0200EB5153 /* RNDatepickerIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40AE12E61F3BFC0200EB5153 /* Build configuration list for PBXNativeTarget "RNNoTagDatepicker" */;
+			buildConfigurationList = 40AE12E61F3BFC0200EB5153 /* Build configuration list for PBXNativeTarget "RNDatepickerIOS" */;
 			buildPhases = (
 				40AE12D91F3BFC0200EB5153 /* Sources */,
 				40AE12DA1F3BFC0200EB5153 /* Frameworks */,
@@ -83,9 +83,9 @@
 			);
 			dependencies = (
 			);
-			name = RNNoTagDatepicker;
-			productName = RNNoTagDatepicker;
-			productReference = 40AE12DD1F3BFC0200EB5153 /* libRNNoTagDatepicker.a */;
+			name = RNDatepickerIOS;
+			productName = RNDatepickerIOS;
+			productReference = 40AE12DD1F3BFC0200EB5153 /* libRNDatepickerIOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 40AE12D81F3BFC0200EB5153 /* Build configuration list for PBXProject "RNNoTagDatepicker" */;
+			buildConfigurationList = 40AE12D81F3BFC0200EB5153 /* Build configuration list for PBXProject "RNDatepickerIOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -116,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				40AE12DC1F3BFC0200EB5153 /* RNNoTagDatepicker */,
+				40AE12DC1F3BFC0200EB5153 /* RNDatepickerIOS */,
 			);
 		};
 /* End PBXProject section */
@@ -126,7 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40AE12E21F3BFC0200EB5153 /* RNNoTagDatepicker.m in Sources */,
+				40AE12E21F3BFC0200EB5153 /* RNDatepickerIOS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +246,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		40AE12D81F3BFC0200EB5153 /* Build configuration list for PBXProject "RNNoTagDatepicker" */ = {
+		40AE12D81F3BFC0200EB5153 /* Build configuration list for PBXProject "RNDatepickerIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40AE12E41F3BFC0200EB5153 /* Debug */,
@@ -255,7 +255,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40AE12E61F3BFC0200EB5153 /* Build configuration list for PBXNativeTarget "RNNoTagDatepicker" */ = {
+		40AE12E61F3BFC0200EB5153 /* Build configuration list for PBXNativeTarget "RNDatepickerIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40AE12E71F3BFC0200EB5153 /* Debug */,

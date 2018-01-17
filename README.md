@@ -1,45 +1,57 @@
-React Native DatePicker
+React Native DatePicker For iOS
 ---
-
-> A React Native DatePicker without Tag
+> An API way to provide datepicker for ios
 
 based on: [Cordova DatePicker Plugin](https://github.com/VitaliiBlagodir/cordova-plugin-datepicker)
 
 origin ios [https://github.com/sectore/phonegap3-ios-datepicker-plugin](https://github.com/sectore/phonegap3-ios-datepicker-plugin)
 
-example code
+## Usage
 
+**pickDate.js**
+```js
+import { NativeEventEmitter, NativeModules } from 'react-native'
+import moment from 'moment'
+
+const { RNDatepickerIOS } = NativeModules
+const DatePickerEvent = new NativeEventEmitter(RNDatepickerIOS)
+
+export default ({ date = moment().format('YYYY-MM-DD'), minDate, maxDate }) =>
+  new Promise((resolve, reject) => {
+    try {
+      RNCMBDatepicker.show({
+        date, minDate, maxDate
+      })
+    } catch (error) {
+      reject(error)
+    }
+    const datePickerListener = DatePickerEvent.addListener('DATEPICKER_NATIVE_INVOKE', evt => {
+      if (evt.status === 'success') {
+        const toMSUnit = parseFloat(evt.value) * 1000
+        const dateFormatted = moment(toMSUnit).format('YYYY-MM-DD')
+        resolve(dateFormatted)
+      }
+      reject(new Error('User cancel'))
+      datePickerListener && datePickerListener.remove()
+    })
+  })
 ```
-import {
-  NativeEventEmitter,
-  NativeModules
-} from 'react-native';
 
-const DatePickerHandler = {};
-const RNNoTagDatepicker = NativeModules.RNNoTagDatepicker;
+**Demo.js**
+```js
+import React from 'react'
+import pickDate from 'xxx/pickDate'
 
-const DatePickerEvent = new NativeEventEmitter(NativeModules.RNNoTagDatepicker);
+class Demo extends React.Component {
+  ...
 
-DatePickerEvent.addListener('DATEPICKER_NATIVE_INVOKE', (evt: Event) => {
-if(evt.status === 'success') {
-  const toMSUnit = parseFloat(evt.value) * 1000;
-  const date =  new Date(toMSUnit);
-  webView.postMessage(JSON.stringify({
-    type: 'DATE_PICKER',
-    success: true,
-    date
-  }));
+  onPressHandler = async () => {
+    try {
+      const date = await pickDate()
+    } catch (error) {
+    }
+  }
 }
-});
-
-const showPicker = async (options) => {
-  RNNoTagDatepicker.show(options);
-};
-
-showPicker({
-  date: payload.date,
-  maxDate: payload.maxDate,
-});
 ```
 
 LICENSE
