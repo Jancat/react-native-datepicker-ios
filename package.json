@@ -1,6 +1,6 @@
 {
   "name": "react-native-datepicker-ios",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Native Datepicker For IOS",
   "main": "index.js",
   "scripts": {
