@@ -110,7 +110,7 @@ RCT_EXPORT_METHOD(show:(NSDictionary *) options) {
         if(maxDateString && maxDateString.length > 0){
             self.datePicker.maximumDate = [formatter dateFromString:maxDateString];
         }
-        if(maxDateString && maxDateString.length > 0){
+        if(minDateString && minDateString.length > 0){
             self.datePicker.minimumDate = [formatter dateFromString:minDateString];
         }
         
