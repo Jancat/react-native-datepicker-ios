@@ -30,7 +30,7 @@ const DatePickerEvent = new NativeEventEmitter(RNDatepickerIOS)
 export default ({ date = moment().format('YYYY-MM-DD'), minDate, maxDate }) =>
   new Promise((resolve, reject) => {
     try {
-      RNCMBDatepicker.show({
+      RNDatepickerIOS.show({
         date, minDate, maxDate
       })
     } catch (error) {
